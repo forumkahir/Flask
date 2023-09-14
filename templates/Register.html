@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="b.css">
+
+    <style>
+        .Container {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+        }
+
+        .logo {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: left;
+            cursor: auto;
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        .btn {
+            background-color: rgb(238, 133, 58);
+            border: 0px;
+            color: white;
+            font-size: x-large;
+            padding: 3px 120px 3px 120px;
+        }
+
+        #name,
+        #email,
+        #password {
+            height: 25px;
+            border: 0px;
+            border-bottom: 1px gray solid;
+            width: 313px;
+            padding: 1px;
+
+        }
+
+        #mobile_number {
+            height: 25px;
+            border: 0px;
+            border-bottom: 1px gray solid;
+            width: 275px;
+            padding: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="form1">
+            <h1 class="logo"><img src="FirstCrylogo.PNG" alt="FirstCry Logo"
+                    onclick="window.open('https://www.firstcry.com/')" width="175px" height="63px"></h1>
+
+            <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <a href="C:\Users\admin\Desktop\ITVedant\Project FirstCry\Login.html"
+                    style="text-decoration: none; color: black;">
+                    < </a><span> Register</span></h2><br>
+            <form class="form" method="POST" action="/">
+                <label for="name" name="name"><b>Full Name:</b></label><br>
+                <input type="text" name="name" id="name" placeholder="Enter your full name"><br><br>
+
+                <label for="mobile_number" name="mobile_number"><b>Mobile Number:</b></label><br>
+                <span style="border: 0px; border-bottom: 1px gray solid; padding: 6px;">+91</label>
+                    <input type="number" name="mobile_number" inputmode="numeric" id="mobile_number"
+                        placeholder="Enter your Mobile Number" required><br><br>
+                    <p style="font-size: smaller;">OTP will be sent on this Mobile No. for verification</p><br>
+
+                    <label for="email" name="email"><b>Email Id:</b></label><br>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email ID" required><br><br>
+
+                    <label for="password" name="password"><b>Password:</b></label><br>
+                    <input type="password" name="password" id="password" placeholder="Enter your Password"
+                        required><br><br>
+
+                    <p style="font-size: smaller;">Password must be at least 8 characters long with 1 Uppercase,<br> 1
+                        Lowercase & 1 Numeric character.</p><br>
+                    <input type="submit" class="btn" value="Continue"></input><br><br>
+            </form>
+            {% if message %}
+            <p>{{ message }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
